@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.row{
+    margin: 0;
+    padding: 0;
+}
+img {
+-webkit-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+-ms-user-select: none;
+user-select: none;
+-webkit-user-drag: none;
+-moz-user-drag: none;
+-o-user-drag: none;
+-ms-user-drag: none;
+user-drag: none;
+}
+
+.landingBanner {
+    height: calc(100vh - 56px);
+    /* background-color: blueviolet; */
+}
+.landingBanner .leftPart {
+    height: calc(100vh - 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+.galleryCon {
+    overflow: hidden;
+    /* background-color: red; */
+    height: calc(100vh - 56px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.galleryCon .galleryCon1{
+    /* margin-right: 10px; */
+    -webkit-animation: move-0 40s linear infinite;
+    -moz-animation: move-0 40s linear infinite;
+    -ms-animation: move-0 40s linear infinite;
+    -o-animation: move-0 40s linear infinite;
+    animation: move-0 40s linear infinite;
+ }
+ .galleryCon .galleryCon2{
+    /* margin-left: 10px; */
+    -webkit-animation: move-50 40s linear infinite;
+    -moz-animation: move-50 40s linear infinite;
+    -ms-animation: move-50 40s linear infinite;
+    -o-animation: move-50 40s linear infinite;
+    animation: move-50 40s linear infinite;
+ }
+ .galleryCon .galleryCon1,.galleryCon .galleryCon2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+ .galleryCon img{
+    height: 150px;
+    background-position: 0 -200px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgb(80, 80, 80);
+    border-radius: 10px;
+    cursor: pointer;
+ }
+ .galleryCon .galleryCon1:hover, .galleryCon .galleryCon2:hover {
+    -webkit-animation-play-state: paused;
+ }
+ @-webkit-keyframes move-0 {
+    0% {  transform: translateY(0);  }
+    100% { transform: translateY(-60%); }
+ }
+ @-webkit-keyframes move-50 {
+    0% {  transform: translateY(-70px);  }
+    100% { transform: translateY(-60%); }
+ }
+
+
+
+ .rounded{
+    display: none;
+    position: absolute;
+    z-index: 200;
+    box-shadow: 0 2px 5px rgba(0, 0, 0,0.5);
+    background-color: aliceblue;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+  .rounded .nowCol{
+    text-align: center;
+  }
+  .rounded .nowCol .bold{ font-weight: 600; font-size: 12px; padding: 0;}
+  .rounded .nowCol .light{ font-weight: 400; font-size: 11px; padding: 0;}

@@ -1,0 +1,120 @@
+/* div{
+    border: 1px solid #789;
+} */
+
+.mainCon{
+    padding: 1rem;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--fiv-col);
+    box-shadow: 0 0.05rem 0.25rem rgb(75, 75, 75);
+}
+.mainCon .mainInput{
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid #c9c9c9;
+    border-radius:0.25rem ;
+}
+.mainCon .inputField{
+    padding: 0.5rem;
+}
+.mainCon input{
+    padding: 0.25rem;
+    font-size: 0.8rem;
+}
+.mainCon .borderRight{
+    border-right: 1px solid #c9c9c9;
+}
+.mainCon .inputArea1,.mainCon .inputArea2{
+    padding: 0.5rem;
+}
+.mainCon .title{
+    padding: 0 0.5rem ;
+    margin: 0;
+}
+/* .mainCon .inputArea1{
+    border-right: 1px solid #787;
+} */
+.mainCon .inputArea1 input{
+    width: 100%;
+}
+.mainCon .inputArea2 input{
+    width: 35%;
+}
+.mainCon .inputArea2 input[type = "submit"]{
+    width: 25%;
+}
+.result{
+    padding: 1.5rem 1rem;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.result .resultDiv{
+    border: 1px solid #4579;
+    display: flex;
+    border-radius: 0.25rem;
+    margin: 0.25rem 0;
+}
+.result .resultDiv img{
+    width: 5rem;
+    border-radius: 50%;
+    border: 2px solid var(--ter-col);
+    margin: 0.5rem;
+}
+.result .resultDiv .details,.modalContent .details{
+    width: 100%;
+    /* border: 1px solid #455; */
+    padding: 0.5rem;
+    position: relative;
+}
+.result .resultDiv .details h5,.modalContent .details h5{
+    font-size: 1.25rem;
+    margin: 0;
+}
+.result .resultDiv .details h6,.modalContent .details h6{
+    margin: 0.5rem 0 0.15rem 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.result .resultDiv .details p,.modalContent .details p{ 
+    margin: 0;
+    font-weight: 500;
+}
+.result .resultDiv .details .bold,.modalContent .details .bold{ 
+    font-weight: 600;
+}
+.result .resultDiv .details .viewMore{ 
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+
+.modalContent{
+    display: flex;
+    border-radius: 0.25rem;
+    margin: 0.25rem 0;
+}
+.modalContent img{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 2rem;
+    border: 2px solid var(--ter-col);
+    margin: 0.5rem;
+}
+.modalContent .details p{ 
+    font-size: 0.8rem;
+}
+.modalContent .details i{ 
+    font-size: 1rem;
+    margin: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    box-shadow: 0 0.05rem 0.25rem #777;
+    background-color: black;
+    color: white;
+}
+
