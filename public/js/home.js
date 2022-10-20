@@ -26,7 +26,7 @@ function updateDet(){
 }
 async function fetchApi(){
     try {
-        const response = await fetch('http://localhost:3000/api/user30');
+        const response = await fetch('/api/user30');
 		const data = await response.json();
         var temp = ``;
         for(var i = 0; i<10;++i){temp += `<img src="${data[i].image}" alt="${data[i].name.split(" ")[0]} ${data[i].designation}" class="homeImage">`;}
