@@ -1,5 +1,6 @@
 import express from "express";
 import alumni from'../models/alumni.js';
+import post from'../models/post.js';
 import auth from './../middlewares/auth.js'; 
 const router = express.Router();
 
@@ -102,7 +103,7 @@ router.post('/login', function(req,res){
       
               user.generateToken((err,user)=>{
                   if(err) return res.status(400).send(err);
-                  res.cookie('UIETConnect',user.token).redirect('/dashboard');
+                  res.cookie('UIETConnect',user.token).cookie('name', user.name).redirect('/dashboard');
               });    
           });
         });
@@ -117,6 +118,25 @@ router.get('/logout',auth,function(req,res){
   });
 
 }); 
+
+router.post('/createPost',function(req,res){
+    const newpost = new post(req.body);
+    console.log(req.body);
+    newpost.save((err,doc)=>{
+      if(err) {console.log(err);
+          return res.status(400).json({ success : false});}
+          let token=req.cookies.UIETConnect;
+          alumni.findByToken(token,(err,user)=>{
+               if(err) return  res(err);
+               let posts = user.posts;
+               console.log(newpost._id);
+               posts.push(newpost._id);
+               alumni.updateOne({_id: user._id},{posts: posts}, function (err) { if (err){console.log(err);} });
+               if(user) return res.redirect('/dashboard'); 
+         });
+    });
+}); 
+
 export default router;
   
 

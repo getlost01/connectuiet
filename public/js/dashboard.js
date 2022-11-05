@@ -17,11 +17,13 @@ toggle.addEventListener("click", () => {
 //     modeText.innerText = "Dark mode";
 //   }
 // });
-var editor = new FroalaEditor('#froala');
-const valFol = document.querySelector('#froala');
-document.querySelector('#okSubmit').addEventListener('click',()=>{
-  console.log(document.querySelector(".fr-wrapper .fr-view").innerHTML);
-});
+
+
+// var editor = new FroalaEditor('#froala');
+// const valFol = document.querySelector('#froala');
+// document.querySelector('#okSubmit').addEventListener('click',()=>{
+//   console.log(document.querySelector(".fr-wrapper .fr-view").innerHTML);
+// });
 
 var sectionArr = ["formSection","analyticSection","notificationSection","settingSection"];
 
@@ -34,3 +36,4 @@ sectionArr.forEach((ele,i) => {
        document.querySelector(`#${ele}`).classList.remove('hidden');
     })
 });
+

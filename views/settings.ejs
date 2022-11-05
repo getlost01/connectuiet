@@ -12,11 +12,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
 	ntegrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/cssFroalaEdit/froala_editor.pkgd.min.css"  />
-  <script type="text/javascript" src="./js/jsFroalaEdit/froala_editor.pkgd.min.js"></script>
+  <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+  <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/dashboard.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/form.css">
+  <link rel="stylesheet" href="./css/editor.css">
 
 </head>
 <body class="">
@@ -171,7 +174,7 @@
 
           <div class="row dataForm">
             <div class="col-lg-6 col-md-7 col-11 mainCon">
-              <form  method="post" action="http://localhost:3000/api/createUser" >
+              <form  method="post" action="/api/createPost" >
                   <h4>Create Notification</h4>
                   <div class="inputCon">
                     <i class="fa-solid fa-quote-left"></i>
@@ -184,7 +187,7 @@
                  <div class="selectCon">
                   <div class="selectType">
                     <i class="fa-solid fa-list"></i>
-                    <select name="category" placeholder="Select a category...">
+                    <select name="category" placeholder="Select a category..."name="category">
                       <option value="">Select a category...</option>
                       <option value="Internship">Internship</option>
                       <option value="Job">Job</option>
@@ -195,7 +198,7 @@
   
                    <div class="selectType">
                     <i class="fa-solid fa-lock"></i>
-                      <select name="postType" placeholder="Visibility of notification...">
+                      <select name="postType" placeholder="Visibility of notification..."name="visibilty">
                       <option value="">Post visibility...</option>
                       <option value="private">Registered User Only</option>
                       <option value="everyone">Everyone</option>
@@ -203,12 +206,12 @@
                    </div>
                  </div>
 
-                  <div class="froalaCon">
-                    <div id="froala"></div>
-                  </div>
+                  <div id="editor-container" class="editorCon"></div>
+                  <!-- <div class="value1" id="value1"> </div> -->
                   <div class="center">
                       <input class="custBTN" type="submit" value="Submit" id="okSubmit">
                   </div>
+                  <textarea class="hidden" name="post" id="postValue" rows="10"></textarea>
               </form>
           </div>
          </div>
@@ -260,7 +263,7 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
       crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
       <script src="./js/dashboard.js"></script>
+      <script src="./js/editor.js"></script>
 </body>
 </html>
