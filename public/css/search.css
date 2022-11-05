@@ -7,7 +7,7 @@
     margin: 2rem 0;
     display: flex;
     justify-content: center;
-    background-color: var(--fiv-col);
+    background-color: #4e54c8;  
     box-shadow: 0 0.05rem 0.25rem rgb(75, 75, 75);
 }
 .mainCon .mainInput{

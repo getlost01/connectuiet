@@ -356,3 +356,70 @@ body.dark .home {
     border-radius: .5rem;
     padding:0.25rem;
 }
+
+.postContainer{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.postContainer .postDiv{
+    background-color: white;
+    border: 1px solid #e8e8e8;
+    padding: 0.25rem;
+    margin: 1rem;
+}
+.postContainer .postDiv .userPhoto{
+    display: flex;
+    padding: 0.25rem;
+    margin: 0.25rem;
+}
+.postContainer .postDiv .userPhoto img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+.postContainer .postDiv .userPhoto h4{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.3rem 0.3rem 0.1rem 0.3rem;
+}
+.postContainer .postDiv .userPhoto h6{
+    font-size: 0.75rem;
+    color: #808080;
+    font-weight: 400;
+    margin: 0.15rem 0.3rem 0 0.3rem;
+}
+.postContainer .postDiv .userPhoto p{
+    font-size: 0.75rem;
+    color: #808080;
+    font-weight: 400;
+    margin: 0 0.3rem 0 0.3rem;
+}
+.postContainer .postDiv .title{
+    margin-bottom: 1rem;
+}
+.postContainer .postDiv .title h4{
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0.15rem 0.3rem 0.1rem 0.75rem;
+}
+.postContainer .postDiv .title h6{
+    font-size: 0.8rem;
+    color: #585858;
+    font-weight: 500;
+    margin: 0.15rem 0.3rem 0 0.75rem;
+}
+.postContainer .postDiv .title button{
+    margin: 0.15rem 0.3rem 0 0.75rem;
+}
+.postContainer .postDiv .title button{
+    margin: 0.15rem 0.3rem 0 0.75rem;
+}
+.postContainer .postDiv .content{
+    margin: 0.55rem;
+    font-size: 0.8rem;
+    color: #444444;
+    border: 1px solid #e8e8e8;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}

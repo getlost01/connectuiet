@@ -4,364 +4,356 @@
  * Copyright (c) 2014, Jason Chen
  * Copyright (c) 2013, salesforce.com
  */
-.value1 {
+.content {
   box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
   position: relative;
-  line-height: 1.42;
-  height: 100%;
-  outline: none;
-  overflow-y: auto;
-  padding: 12px 15px;
-  tab-size: 4;
-  -moz-tab-size: 4;
   text-align: left;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-.value1 > * {
+.content > * {
   cursor: text;
 }
-.value1 p,
-.value1 ol,
-.value1 ul,
-.value1 pre,
-.value1 blockquote,
-.value1 h1,
-.value1 h2,
-.value1 h3,
-.value1 h4,
-.value1 h5,
-.value1 h6 {
+.content p,
+.content ol,
+.content ul,
+.content pre,
+.content blockquote,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
   margin: 0;
   padding: 0;
   counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
 }
-.value1 ol,
-.value1 ul {
+.content ol,
+.content ul {
   padding-left: 1.5em;
 }
-.value1 ol > li,
-.value1 ul > li {
+.content ol > li,
+.content ul > li {
   list-style-type: none;
 }
-.value1 ul > li::before {
+.content ul > li::before {
   content: '\2022';
 }
-.value1 ul[data-checked=true],
-.value1 ul[data-checked=false] {
+.content ul[data-checked=true],
+.content ul[data-checked=false] {
   pointer-events: none;
 }
-.value1 ul[data-checked=true] > li *,
-.value1 ul[data-checked=false] > li * {
+.content ul[data-checked=true] > li *,
+.content ul[data-checked=false] > li * {
   pointer-events: all;
 }
-.value1 ul[data-checked=true] > li::before,
-.value1 ul[data-checked=false] > li::before {
+.content ul[data-checked=true] > li::before,
+.content ul[data-checked=false] > li::before {
   color: #777;
   cursor: pointer;
   pointer-events: all;
 }
-.value1 ul[data-checked=true] > li::before {
+.content ul[data-checked=true] > li::before {
   content: '\2611';
 }
-.value1 ul[data-checked=false] > li::before {
+.content ul[data-checked=false] > li::before {
   content: '\2610';
 }
-.value1 li::before {
+.content li::before {
   display: inline-block;
   white-space: nowrap;
   width: 1.2em;
 }
-.value1 li:not(.ql-direction-rtl)::before {
+.content li:not(.ql-direction-rtl)::before {
   margin-left: -1.5em;
   margin-right: 0.3em;
   text-align: right;
 }
-.value1 li.ql-direction-rtl::before {
+.content li.ql-direction-rtl::before {
   margin-left: 0.3em;
   margin-right: -1.5em;
 }
-.value1 ol li:not(.ql-direction-rtl),
-.value1 ul li:not(.ql-direction-rtl) {
+.content ol li:not(.ql-direction-rtl),
+.content ul li:not(.ql-direction-rtl) {
   padding-left: 1.5em;
 }
-.value1 ol li.ql-direction-rtl,
-.value1 ul li.ql-direction-rtl {
+.content ol li.ql-direction-rtl,
+.content ul li.ql-direction-rtl {
   padding-right: 1.5em;
 }
-.value1 ol li {
+.content ol li {
   counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
   counter-increment: list-0;
 }
-.value1 ol li:before {
+.content ol li:before {
   content: counter(list-0, decimal) '. ';
 }
-.value1 ol li.ql-indent-1 {
+.content ol li.ql-indent-1 {
   counter-increment: list-1;
 }
-.value1 ol li.ql-indent-1:before {
+.content ol li.ql-indent-1:before {
   content: counter(list-1, lower-alpha) '. ';
 }
-.value1 ol li.ql-indent-1 {
+.content ol li.ql-indent-1 {
   counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
 }
-.value1 ol li.ql-indent-2 {
+.content ol li.ql-indent-2 {
   counter-increment: list-2;
 }
-.value1 ol li.ql-indent-2:before {
+.content ol li.ql-indent-2:before {
   content: counter(list-2, lower-roman) '. ';
 }
-.value1 ol li.ql-indent-2 {
+.content ol li.ql-indent-2 {
   counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
 }
-.value1 ol li.ql-indent-3 {
+.content ol li.ql-indent-3 {
   counter-increment: list-3;
 }
-.value1 ol li.ql-indent-3:before {
+.content ol li.ql-indent-3:before {
   content: counter(list-3, decimal) '. ';
 }
-.value1 ol li.ql-indent-3 {
+.content ol li.ql-indent-3 {
   counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
 }
-.value1 ol li.ql-indent-4 {
+.content ol li.ql-indent-4 {
   counter-increment: list-4;
 }
-.value1 ol li.ql-indent-4:before {
+.content ol li.ql-indent-4:before {
   content: counter(list-4, lower-alpha) '. ';
 }
-.value1 ol li.ql-indent-4 {
+.content ol li.ql-indent-4 {
   counter-reset: list-5 list-6 list-7 list-8 list-9;
 }
-.value1 ol li.ql-indent-5 {
+.content ol li.ql-indent-5 {
   counter-increment: list-5;
 }
-.value1 ol li.ql-indent-5:before {
+.content ol li.ql-indent-5:before {
   content: counter(list-5, lower-roman) '. ';
 }
-.value1 ol li.ql-indent-5 {
+.content ol li.ql-indent-5 {
   counter-reset: list-6 list-7 list-8 list-9;
 }
-.value1 ol li.ql-indent-6 {
+.content ol li.ql-indent-6 {
   counter-increment: list-6;
 }
-.value1 ol li.ql-indent-6:before {
+.content ol li.ql-indent-6:before {
   content: counter(list-6, decimal) '. ';
 }
-.value1 ol li.ql-indent-6 {
+.content ol li.ql-indent-6 {
   counter-reset: list-7 list-8 list-9;
 }
-.value1 ol li.ql-indent-7 {
+.content ol li.ql-indent-7 {
   counter-increment: list-7;
 }
-.value1 ol li.ql-indent-7:before {
+.content ol li.ql-indent-7:before {
   content: counter(list-7, lower-alpha) '. ';
 }
-.value1 ol li.ql-indent-7 {
+.content ol li.ql-indent-7 {
   counter-reset: list-8 list-9;
 }
-.value1 ol li.ql-indent-8 {
+.content ol li.ql-indent-8 {
   counter-increment: list-8;
 }
-.value1 ol li.ql-indent-8:before {
+.content ol li.ql-indent-8:before {
   content: counter(list-8, lower-roman) '. ';
 }
-.value1 ol li.ql-indent-8 {
+.content ol li.ql-indent-8 {
   counter-reset: list-9;
 }
-.value1 ol li.ql-indent-9 {
+.content ol li.ql-indent-9 {
   counter-increment: list-9;
 }
-.value1 ol li.ql-indent-9:before {
+.content ol li.ql-indent-9:before {
   content: counter(list-9, decimal) '. ';
 }
-.value1 .ql-indent-1:not(.ql-direction-rtl) {
+.content .ql-indent-1:not(.ql-direction-rtl) {
   padding-left: 3em;
 }
-.value1 li.ql-indent-1:not(.ql-direction-rtl) {
+.content li.ql-indent-1:not(.ql-direction-rtl) {
   padding-left: 4.5em;
 }
-.value1 .ql-indent-1.ql-direction-rtl.ql-align-right {
+.content .ql-indent-1.ql-direction-rtl.ql-align-right {
   padding-right: 3em;
 }
-.value1 li.ql-indent-1.ql-direction-rtl.ql-align-right {
+.content li.ql-indent-1.ql-direction-rtl.ql-align-right {
   padding-right: 4.5em;
 }
-.value1 .ql-indent-2:not(.ql-direction-rtl) {
+.content .ql-indent-2:not(.ql-direction-rtl) {
   padding-left: 6em;
 }
-.value1 li.ql-indent-2:not(.ql-direction-rtl) {
+.content li.ql-indent-2:not(.ql-direction-rtl) {
   padding-left: 7.5em;
 }
-.value1 .ql-indent-2.ql-direction-rtl.ql-align-right {
+.content .ql-indent-2.ql-direction-rtl.ql-align-right {
   padding-right: 6em;
 }
-.value1 li.ql-indent-2.ql-direction-rtl.ql-align-right {
+.content li.ql-indent-2.ql-direction-rtl.ql-align-right {
   padding-right: 7.5em;
 }
-.value1 .ql-indent-3:not(.ql-direction-rtl) {
+.content .ql-indent-3:not(.ql-direction-rtl) {
   padding-left: 9em;
 }
-.value1 li.ql-indent-3:not(.ql-direction-rtl) {
+.content li.ql-indent-3:not(.ql-direction-rtl) {
   padding-left: 10.5em;
 }
-.value1 .ql-indent-3.ql-direction-rtl.ql-align-right {
+.content .ql-indent-3.ql-direction-rtl.ql-align-right {
   padding-right: 9em;
 }
-.value1 li.ql-indent-3.ql-direction-rtl.ql-align-right {
+.content li.ql-indent-3.ql-direction-rtl.ql-align-right {
   padding-right: 10.5em;
 }
-.value1 .ql-indent-4:not(.ql-direction-rtl) {
+.content .ql-indent-4:not(.ql-direction-rtl) {
   padding-left: 12em;
 }
-.value1 li.ql-indent-4:not(.ql-direction-rtl) {
+.content li.ql-indent-4:not(.ql-direction-rtl) {
   padding-left: 13.5em;
 }
-.value1 .ql-indent-4.ql-direction-rtl.ql-align-right {
+.content .ql-indent-4.ql-direction-rtl.ql-align-right {
   padding-right: 12em;
 }
-.value1 li.ql-indent-4.ql-direction-rtl.ql-align-right {
+.content li.ql-indent-4.ql-direction-rtl.ql-align-right {
   padding-right: 13.5em;
 }
-.value1 .ql-indent-5:not(.ql-direction-rtl) {
+.content .ql-indent-5:not(.ql-direction-rtl) {
   padding-left: 15em;
 }
-.value1 li.ql-indent-5:not(.ql-direction-rtl) {
+.content li.ql-indent-5:not(.ql-direction-rtl) {
   padding-left: 16.5em;
 }
-.value1 .ql-indent-5.ql-direction-rtl.ql-align-right {
+.content .ql-indent-5.ql-direction-rtl.ql-align-right {
   padding-right: 15em;
 }
-.value1 li.ql-indent-5.ql-direction-rtl.ql-align-right {
+.content li.ql-indent-5.ql-direction-rtl.ql-align-right {
   padding-right: 16.5em;
 }
-.value1 .ql-indent-6:not(.ql-direction-rtl) {
+.content .ql-indent-6:not(.ql-direction-rtl) {
   padding-left: 18em;
 }
-.value1 li.ql-indent-6:not(.ql-direction-rtl) {
+.content li.ql-indent-6:not(.ql-direction-rtl) {
   padding-left: 19.5em;
 }
-.value1 .ql-indent-6.ql-direction-rtl.ql-align-right {
+.content .ql-indent-6.ql-direction-rtl.ql-align-right {
   padding-right: 18em;
 }
-.value1 li.ql-indent-6.ql-direction-rtl.ql-align-right {
+.content li.ql-indent-6.ql-direction-rtl.ql-align-right {
   padding-right: 19.5em;
 }
-.value1 .ql-indent-7:not(.ql-direction-rtl) {
+.content .ql-indent-7:not(.ql-direction-rtl) {
   padding-left: 21em;
 }
-.value1 li.ql-indent-7:not(.ql-direction-rtl) {
+.content li.ql-indent-7:not(.ql-direction-rtl) {
   padding-left: 22.5em;
 }
-.value1 .ql-indent-7.ql-direction-rtl.ql-align-right {
+.content .ql-indent-7.ql-direction-rtl.ql-align-right {
   padding-right: 21em;
 }
-.value1 li.ql-indent-7.ql-direction-rtl.ql-align-right {
+.content li.ql-indent-7.ql-direction-rtl.ql-align-right {
   padding-right: 22.5em;
 }
-.value1 .ql-indent-8:not(.ql-direction-rtl) {
+.content .ql-indent-8:not(.ql-direction-rtl) {
   padding-left: 24em;
 }
-.value1 li.ql-indent-8:not(.ql-direction-rtl) {
+.content li.ql-indent-8:not(.ql-direction-rtl) {
   padding-left: 25.5em;
 }
-.value1 .ql-indent-8.ql-direction-rtl.ql-align-right {
+.content .ql-indent-8.ql-direction-rtl.ql-align-right {
   padding-right: 24em;
 }
-.value1 li.ql-indent-8.ql-direction-rtl.ql-align-right {
+.content li.ql-indent-8.ql-direction-rtl.ql-align-right {
   padding-right: 25.5em;
 }
-.value1 .ql-indent-9:not(.ql-direction-rtl) {
+.content .ql-indent-9:not(.ql-direction-rtl) {
   padding-left: 27em;
 }
-.value1 li.ql-indent-9:not(.ql-direction-rtl) {
+.content li.ql-indent-9:not(.ql-direction-rtl) {
   padding-left: 28.5em;
 }
-.value1 .ql-indent-9.ql-direction-rtl.ql-align-right {
+.content .ql-indent-9.ql-direction-rtl.ql-align-right {
   padding-right: 27em;
 }
-.value1 li.ql-indent-9.ql-direction-rtl.ql-align-right {
+.content li.ql-indent-9.ql-direction-rtl.ql-align-right {
   padding-right: 28.5em;
 }
-.value1 .ql-video {
+.content .ql-video {
   display: block;
   max-width: 100%;
 }
-.value1 .ql-video.ql-align-center {
+.content .ql-video.ql-align-center {
   margin: 0 auto;
 }
-.value1 .ql-video.ql-align-right {
+.content .ql-video.ql-align-right {
   margin: 0 0 0 auto;
 }
-.value1 .ql-bg-black {
+.content .ql-bg-black {
   background-color: #000;
 }
-.value1 .ql-bg-red {
+.content .ql-bg-red {
   background-color: #e60000;
 }
-.value1 .ql-bg-orange {
+.content .ql-bg-orange {
   background-color: #f90;
 }
-.value1 .ql-bg-yellow {
+.content .ql-bg-yellow {
   background-color: #ff0;
 }
-.value1 .ql-bg-green {
+.content .ql-bg-green {
   background-color: #008a00;
 }
-.value1 .ql-bg-blue {
+.content .ql-bg-blue {
   background-color: #06c;
 }
-.value1 .ql-bg-purple {
+.content .ql-bg-purple {
   background-color: #93f;
 }
-.value1 .ql-color-white {
+.content .ql-color-white {
   color: #fff;
 }
-.value1 .ql-color-red {
+.content .ql-color-red {
   color: #e60000;
 }
-.value1 .ql-color-orange {
+.content .ql-color-orange {
   color: #f90;
 }
-.value1 .ql-color-yellow {
+.content .ql-color-yellow {
   color: #ff0;
 }
-.value1 .ql-color-green {
+.content .ql-color-green {
   color: #008a00;
 }
-.value1 .ql-color-blue {
+.content .ql-color-blue {
   color: #06c;
 }
-.value1 .ql-color-purple {
+.content .ql-color-purple {
   color: #93f;
 }
-.value1 .ql-font-serif {
+.content .ql-font-serif {
   font-family: Georgia, Times New Roman, serif;
 }
-.value1 .ql-font-monospace {
+.content .ql-font-monospace {
   font-family: Monaco, Courier New, monospace;
 }
-.value1 .ql-size-small {
+.content .ql-size-small {
   font-size: 0.75em;
 }
-.value1 .ql-size-large {
+.content .ql-size-large {
   font-size: 1.5em;
 }
-.value1 .ql-size-huge {
+.content .ql-size-huge {
   font-size: 2.5em;
 }
-.value1 .ql-direction-rtl {
+.content .ql-direction-rtl {
   direction: rtl;
   text-align: inherit;
 }
-.value1 .ql-align-center {
+.content .ql-align-center {
   text-align: center;
 }
-.value1 .ql-align-justify {
+.content .ql-align-justify {
   text-align: justify;
 }
-.value1 .ql-align-right {
+.content .ql-align-right {
   text-align: right;
 }
 .value1.ql-blank::before {
@@ -373,54 +365,54 @@
   position: absolute;
   right: 15px;
 }
-.value1 h1 {
+.content h1 {
   font-size: 2em;
 }
-.value1 h2 {
+.content h2 {
   font-size: 1.5em;
 }
-.value1 h3 {
+.content h3 {
   font-size: 1.17em;
 }
-.value1 h4 {
+.content h4 {
   font-size: 1em;
 }
-.value1 h5 {
+.content h5 {
   font-size: 0.83em;
 }
-.value1 h6 {
+.content h6 {
   font-size: 0.67em;
 }
-.value1 a {
+.content a {
   text-decoration: underline;
   font-weight: 500;
 }
-.value1 blockquote {
+.content blockquote {
   border-left: 4px solid #ccc;
   margin-bottom: 5px;
   margin-top: 5px;
   padding-left: 16px;
 }
-.value1 code,
-.value1 pre {
+.content code,
+.content pre {
   background-color: #f0f0f0;
   border-radius: 3px;
 }
-.value1 pre {
+.content pre {
   white-space: pre-wrap;
   margin-bottom: 5px;
   margin-top: 5px;
   padding: 5px 10px;
 }
-.value1 code {
+.content code {
   font-size: 85%;
   padding: 2px 4px;
 }
-.value1 pre.ql-syntax {
+.content pre.ql-syntax {
   background-color: #23241f;
   color: #f8f8f2;
   overflow: visible;
 }
-.value1 img {
+.content img {
   max-width: 100%;
 }

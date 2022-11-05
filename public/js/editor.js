@@ -68,15 +68,15 @@ var value1 = document.querySelector('#value1');
 var quill = new Quill('#editor-container', {
 modules: {
 toolbar: [
-[{ 'indent': '-1'}, { 'indent': '+1' }],       
+// [{ 'indent': '-1'}, { 'indent': '+1' }],       
 ['bold', 'italic', 'underline', 'strike','blockquote', 'code-block','link'],
 [{ 'align': [] }],
 [{ 'list': 'ordered'}, { 'list': 'bullet' }],
 [{ 'script': 'sub'}, { 'script': 'super' }],      
-['formula'] ,
-[{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-[{ 'font': [] }],
-[{ 'size': ['small', false, 'large', 'huge'] }],        
+// ['formula'] ,
+// [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+// [{ 'font': [] }],
+// [{ 'size': ['small', false, 'large', 'huge'] }],        
 [{ 'color': [] }, { 'background': [] }],  
 ]
 },

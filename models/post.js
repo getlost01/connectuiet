@@ -8,7 +8,11 @@ const postDetail = new Schema({
     category: String,
     visibilty: String,
     post: String,
-    short_description : String
+    short_description : String,
+    createdBy: String,
+    designation: {type:String,default: "Student"},
+    userId: String,
+    image: {type:String,default: "./images/user.png"},
 },{timestamps:true})
 
 const post = mongoose.model('Posts',postDetail);

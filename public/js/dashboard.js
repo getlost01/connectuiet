@@ -37,3 +37,64 @@ sectionArr.forEach((ele,i) => {
     })
 });
 
+const postContainer = document.querySelector('.postContainer');
+
+async function fetchPost(){
+  try {
+      const response = await fetch('/api/getPost');
+      const data = await response.json();
+      var temp = ``;
+      data.forEach(post => {
+          temp += `<div class="postDiv col-lg-8 col-12">
+          <div class="userPhoto">
+              <img src="${post.image}" alt="">
+              <div class="userDet">
+                <h4> ${post.createdBy}</h4>
+                <h6> ${post.designation}</h6>
+                <p>${timeSince(new Date(post.createdAt))}</p>
+              </div>
+          </div>
+          <div class="title">
+            <h4> ${post.title}</h4>
+            <h6>${post.short_description}</h6>
+            <div class="content">${post.post}</div>
+            <h4>Category : ${post.category}</h4>
+          </div>
+        </div>`;
+      });
+      postContainer.innerHTML = temp;
+  } catch (error) {
+      console.log(error);
+      
+  }
+}
+fetchPost();
+
+
+function timeSince(date) {
+
+  var seconds = Math.floor((new Date() - date) / 1000);
+
+  var interval = seconds / 31536000;
+
+  if (interval > 1) {
+    return Math.floor(interval) + " yr";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    return Math.floor(interval) + " mon";
+  }
+  interval = seconds / 86400;
+  if (interval > 1) {
+    return Math.floor(interval) + " day";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    return Math.floor(interval) + " hrs";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    return Math.floor(interval) + " min";
+  }
+  return Math.floor(seconds) + " sec";
+}

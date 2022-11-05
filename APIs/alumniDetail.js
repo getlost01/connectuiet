@@ -80,10 +80,10 @@ router.get('/updateTemp',async(req,res,next)=>{
         newuser.save((err,doc)=>{
             if(err) {console.log(err);
                 return res.status(400).json({ success : false});}
-            res.status(200).json({
-                succes:true,
-                user : doc
-            });
+                doc.generateToken((err,user)=>{
+                  if(err) return res.status(400).send(err);
+                  res.cookie('UIETConnect',user.token).cookie('name', user.name).redirect('/dashboard');
+              });  
         });
     });
  });
@@ -120,21 +120,38 @@ router.get('/logout',auth,function(req,res){
 }); 
 
 router.post('/createPost',function(req,res){
-    const newpost = new post(req.body);
-    console.log(req.body);
+    let token = req.cookies.UIETConnect;
+    let userDet = req.body;
+    alumni.findByToken(token,(err,user)=>{
+      if(err) return  res(err);
+      userDet.createdBy=user.name;
+      userDet.designation=user.designation;
+      userDet.userId= user._id;
+    const newpost = new post(userDet);
+    console.log(newpost);
     newpost.save((err,doc)=>{
       if(err) {console.log(err);
           return res.status(400).json({ success : false});}
-          let token=req.cookies.UIETConnect;
-          alumni.findByToken(token,(err,user)=>{
-               if(err) return  res(err);
                let posts = user.posts;
-               console.log(newpost._id);
+              //  console.log(newpost._id);
                posts.push(newpost._id);
                alumni.updateOne({_id: user._id},{posts: posts}, function (err) { if (err){console.log(err);} });
                if(user) return res.redirect('/dashboard'); 
          });
     });
+}); 
+
+router.get('/getPost',async(req,res,next)=>{
+  try {
+    var q = post.find({}).sort({_id: -1});
+    q.exec(function(err, property) {
+        if (err) res.send(err);
+        res.json(property);
+    });
+    // res.send("done");
+  } catch (error) {
+    next(error)
+  }
 }); 
 
 export default router;

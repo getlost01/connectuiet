@@ -7,7 +7,6 @@
 .mainCon{
     border: 1px solid var(--quad-col);
     padding: 1rem 1.5rem;
-    box-shadow: 0 0.1rem 0.2rem #cdcdcd;
     background-color: white;
     margin: 1rem 0.5rem;
     border-radius: 0.25rem;
