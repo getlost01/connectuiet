@@ -10,7 +10,11 @@ router.get('/',async(req,res,next)=>{
 });
 
 router.get('/search',async(req,res,next)=>{
-    try { res.render('search'); } catch (error) {next(error); }
+    try { let token=req.cookies.UIETConnect; alumni.findByToken(token,(err,user)=>{
+        if(err) return  res(err);
+            if(user) return res.render('search'); 
+            else return res.redirect('/login');});
+}catch (error) {next(error); }
 });
 
 router.get('/dashboard',async(req,res,next)=>{
