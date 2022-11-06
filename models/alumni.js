@@ -19,6 +19,9 @@ const alumniDetail = new Schema({
     password: String,
     password2: String,
     posts : [Schema.Types.Mixed],
+    bio: String,
+    company: String,
+    username: String,
     token: String
 },{timestamps:true})
 

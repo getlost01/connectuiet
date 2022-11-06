@@ -2,7 +2,7 @@
     border: 1px solid #789;
 } */
 
-.mainCon{
+.mainConSer{
     padding: 1rem;
     margin: 2rem 0;
     display: flex;
@@ -10,39 +10,39 @@
     background-color: #4e54c8;  
     box-shadow: 0 0.05rem 0.25rem rgb(75, 75, 75);
 }
-.mainCon .mainInput{
+.mainConSer .mainInput{
     padding: 0.5rem;
     background-color: white;
     border: 1px solid #c9c9c9;
     border-radius:0.25rem ;
 }
-.mainCon .inputField{
+.mainConSer .inputField{
     padding: 0.5rem;
 }
-.mainCon input{
+.mainConSer input{
     padding: 0.25rem;
     font-size: 0.8rem;
 }
-.mainCon .borderRight{
+.mainConSer .borderRight{
     border-right: 1px solid #c9c9c9;
 }
-.mainCon .inputArea1,.mainCon .inputArea2{
+.mainConSer .inputArea1,.mainConSer .inputArea2{
     padding: 0.5rem;
 }
-.mainCon .title{
+.mainConSer .title{
     padding: 0 0.5rem ;
     margin: 0;
 }
-/* .mainCon .inputArea1{
+/* .mainConSer .inputArea1{
     border-right: 1px solid #787;
 } */
-.mainCon .inputArea1 input{
+.mainConSer .inputArea1 input{
     width: 100%;
 }
-.mainCon .inputArea2 input{
+.mainConSer .inputArea2 input{
     width: 35%;
 }
-.mainCon .inputArea2 input[type = "submit"]{
+.mainConSer .inputArea2 input[type = "submit"]{
     width: 25%;
 }
 .result{
@@ -57,6 +57,7 @@
     display: flex;
     border-radius: 0.25rem;
     margin: 0.25rem 0;
+    background-color: white;
 }
 .result .resultDiv img{
     width: 5rem;
@@ -71,17 +72,19 @@
     position: relative;
 }
 .result .resultDiv .details h5,.modalContent .details h5{
-    font-size: 1.25rem;
+    font-size: 1.10rem;
     margin: 0;
+    font-weight: 600;
 }
 .result .resultDiv .details h6,.modalContent .details h6{
     margin: 0.5rem 0 0.15rem 0;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 .result .resultDiv .details p,.modalContent .details p{ 
-    margin: 0;
+    margin: -0.1rem 0 0.15rem 0;
     font-weight: 500;
+    font-size: 0.8rem;
 }
 .result .resultDiv .details .bold,.modalContent .details .bold{ 
     font-weight: 600;

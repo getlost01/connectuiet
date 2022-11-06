@@ -423,3 +423,91 @@ body.dark .home {
     padding: 0.5rem;
     border-radius: 0.25rem;
 }
+
+
+.profileCon{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.profileCon .infoContaner .editBTN,.profileCon  .basicInfo .editBTN{
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    cursor: pointer;
+    color: #0d6efd;
+    font-weight: 500;
+}
+.profileCon .basicInfo{
+    position: relative;
+    display: flex; flex-wrap:wrap;
+    background-color: white;
+    border: 1px solid #e8e8e8;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+.profileCon .infoContaner {
+    position: relative;
+    background-color: white;
+    border: 1px solid #e8e8e8;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+.profileCon .infoContaner .infoContanerInner{
+    display: flex;
+    margin: 0.25rem;
+}
+.profileCon .infoContaner .title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+.profileCon .basicInfo img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+.profileCon .infoContaner img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+.profileCon .basicInfo .dataDetail,.profileCon .infoContaner .dataDetail{
+    padding: 0.5rem 1rem;
+}
+.profileCon .basicInfo .dataDetail .Name,.profileCon .infoContaner .dataDetail .TitleName{
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+.profileCon .basicInfo .dataDetail .Bio{
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #484848;
+    margin: 0;
+    padding: 0;
+}
+.profileCon .basicInfo .dataDetail .City{
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #484848;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.2rem;
+}
+.profileCon .basicInfo .dataDetail .Contact{
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #484848;
+}
+.profileCon .infoContaner .dataDetail .TitleName{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.profileCon .infoContaner .dataDetail .subPart, .profileCon .infoContaner .dataDetail .timeDur{
+    font-weight: 400;
+    font-size: 0.7rem;
+    margin-bottom: 0;
+}

@@ -1,5 +1,6 @@
 import express from "express";
 import alumni from'../models/alumni.js';
+import post from '../models/post.js';
 import auth from './../middlewares/auth.js'; 
 const router = express.Router();
 
@@ -15,8 +16,14 @@ router.get('/search',async(req,res,next)=>{
 router.get('/dashboard',async(req,res,next)=>{
     try { let token=req.cookies.UIETConnect; alumni.findByToken(token,(err,user)=>{
             if(err) return  res(err);
-            if(user) return res.render('settings',{user}); 
-            else return res.redirect('/login');});
+            post.find({
+                _id: user.posts
+              },(err,doc)=>{
+                if(err) return  res(err);
+                console.log(doc);
+                if(user) return res.render('settings',{user,doc}); 
+                else return res.redirect('/login');});
+              })
     }catch (error) {next(error); }
 });
 

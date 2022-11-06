@@ -25,7 +25,7 @@ toggle.addEventListener("click", () => {
 //   console.log(document.querySelector(".fr-wrapper .fr-view").innerHTML);
 // });
 
-var sectionArr = ["formSection","analyticSection","notificationSection","settingSection"];
+var sectionArr = ["f","p","ser","n","s"];
 
 sectionArr.forEach((ele,i) => {
     var sidebarEle = `dash${i}`;

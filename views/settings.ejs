@@ -20,9 +20,110 @@
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/form.css">
   <link rel="stylesheet" href="./css/editor.css">
+  <link rel="stylesheet" href="./css/search.css">
 
 </head>
 <body class="">
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Info Update</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mainCon">
+            <form  method="post" action="/api/updateUser" >
+                <h4>Update Details</h4>
+                <div class="inputCon">
+                    <i class="fa-solid fa-user"></i>
+                    <input required type="text" placeholder="Full Name" name="name" value="<%= locals.user.name %> ">
+                </div>
+                <div class="inputCon">
+                    <i class="fa-solid fa-grip-lines"></i>
+                    <input required type="text" placeholder="Bio" name="bio" value="<%= locals.user.bio %> ">
+                </div>
+                <div class="inputCon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input required type="text" placeholder="City" name="city" value="<%= locals.user.city %> ">
+                </div>
+                <div class="inputCon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input required type="email" placeholder="Email" name="email" value="<%= locals.user.email %> ">
+                </div>
+                <div class="inputCon">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <input required type="url" placeholder="Linkedin URL" name="linkedin" value="<%= locals.user.linkedin %> ">
+                </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">College Info Update</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mainCon">
+            <form  method="post" action="/api/updateUser" >
+                <h4>Update Details</h4>
+                <div class="inputCon">
+                    <i class="fa-solid fa-file"></i>
+                    <input required type="text" placeholder="Degree" name="degree" value="<%= locals.user.degree %> ">
+                </div>
+                <div class="inputCon">
+                  <i class="fa-solid fa-flask-vial"></i>
+                  <input required type="text" placeholder="Branch" name="branch" value="<%= locals.user.branch %> ">
+                </div>
+                <div class="inputCon">
+                    <i class="fa-solid fa-list"></i>
+                    <input required type="text" placeholder="Batch" max="2022" min="1950" name="batch" value="<%= locals.user.batch %> ">
+                </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">College Info Update</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mainCon">
+            <form  method="post" action="/api/updateUser" >
+                <h4>Update Details</h4>
+                <div class="inputCon">
+                  <i class="fa-solid fa-building"></i>
+                    <input required type="text" placeholder="Company" name="company" value="<%= locals.user.company %> ">
+                </div>
+                <div class="inputCon">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <input required type="text" placeholder="Designation" name="designation" value="<%= locals.user.designation %> ">
+                </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
+
     <nav class="sidebar close">
         <header>
           <div class="image-text">
@@ -41,28 +142,35 @@
       
             <ul class="menu-links">
               <li class="nav-link">
-                <a href="#formSection" id="dash0">
+                <a href="#f" id="dash0">
                   <i class="fa-solid fa-house icon"></i>
-                  <span class="text nav-text">Update Details</span>
+                  <span class="text nav-text">Feeds</span>
                 </a>
               </li>
       
               <li class="nav-link">
-                <a href="#analyticSection" id="dash1">
-                  <i class="fa-solid fa-chart-column  icon"></i>
-                  <span class="text nav-text">Analytics</span>
+                <a href="#p" id="dash1">
+                  <i class="fa-solid fa-user  icon"></i>
+                  <span class="text nav-text">Profile</span>
                 </a>
               </li>
 
               <li class="nav-link">
-                <a href="#notificationSection" id="dash2">
+                <a href="#ser" id="dash2">
+                  <i class="fa-solid fa-magnifying-glass icon"></i>
+                  <span class="text nav-text">Search</span>
+                </a>
+              </li>
+
+              <li class="nav-link">
+                <a href="#n" id="dash3">
                   <i class="fa-solid fa-bullhorn icon"></i>
                   <span class="text nav-text">Notifications</span>
                 </a>
               </li>
 
               <li class="nav-link">
-                <a href="#settingSection" id="dash3">
+                <a href="#s" id="dash4">
                   <i class="fa-solid fa-gear icon"></i>
                   <span class="text nav-text">Settings</span>
                 </a>
@@ -98,7 +206,7 @@
       
       
         <section class="home">
-<!-- ------------------------------------------------------ Form Section ------------------------------------------------------ -->
+<!-- ------------------------------------------------------ Feed Section ------------------------------------------------------ -->
 
            <div class="sectionHeader">
              <img src="<%= ((locals.user.image)?locals.user.image:"./images/user.png")%>" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -110,8 +218,8 @@
               <li><a class="dropdown-item" href="#">Separated link</a></li>
             </ul>
            </div>
-           <div class="row" id="formSection">
-           <div class="row dataForm" >
+           <div class="row hidden" id="p">
+           <!-- <div class="row dataForm" >
             <div class="col-lg-6 col-md-7 col-11 mainCon">
               <form  method="post" action="/api/updateUser" >
                   <h4>Update Details</h4>
@@ -160,17 +268,80 @@
                   </div>
               </form>
           </div>
-           </div>
-           </div>
+           </div> -->
+           <div class="row profileCon">
+            <div class="col-md-8 col-lg-6 col-12 basicInfo">
+            <span data-bs-toggle="modal" data-bs-target="#exampleModal1" class="editBTN">Edit</span>
+                <img src="<%= ((locals.user.image)?locals.user.image:"./images/user.png")%>" alt="">
+                <div class="dataDetail">
+                    <div class="Name"><%= locals.user.name%></div>
+                    <div class="Bio"><%= locals.user.bio%></div>
+                    <div class="City"> <a href="https://www.google.com/maps/place/<%= locals.user.city%>" target="_blank" rel="noopener noreferrer"> <%= locals.user.city%> </a></div>
+                    <div class="Contact">
+                       <strong> Contact me:</strong> <br><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=<%= locals.user.email%>" target="_blank" rel="noopener noreferrer"><%= locals.user.email%></a><br>
+                        <a href="<%= locals.user.linkedin%>" target="_blank" rel="noopener noreferrer"><%= locals.user.linkedin %></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-6 col-12 infoContaner">
+                <span data-bs-toggle="modal" data-bs-target="#exampleModal2" class="editBTN">Edit</span>
+                <div class="title">Education</div>
+                <div class="infoContanerInner">
+                    <img src="./images/logo.png" alt="">
+                    <div class="dataDetail">
+                        <div class="TitleName">University Institute Of Engineering And Technology, Kanpur</div>
+                        <div class="subPart"><%= locals.user.degree %> (<%= locals.user.branch%> )</div>
+                        <div class="timeDur"><%= locals.user.batch %> - <%= locals.user.batch + 4%></div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-md-8 col-lg-6 col-12  infoContaner">
+                <span data-bs-toggle="modal" data-bs-target="#exampleModal3" class="editBTN">Edit</span>
+                <div class="title">Experience</div>
+                <div class="infoContanerInner">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="">
+                    <div class="dataDetail">
+                        <div class="TitleName"><%= locals.user.company %></div>
+                        <div class="subPart"><%= locals.user.designation %></div>
+                        <div class="timeDur">2020 - 2024</div>
+                    </div>
+                </div>
+                
+            </div>
+        
+        <div class="col-md-8 col-lg-6 col-12 infoContaner">
+            <div class="title">Posts</div>
+          <% if(locals.doc.length<=0) {%>
+            <div class="infoContanerInner">
+              <div class="dataDetail">
+                  <div class="subPart"><%= locals.user.name%> haven't post yet.</div>
+              </div>
+          </div>
+           <% }else { for(let i = locals.doc.length-1 ;i>=0;--i){%>
+              <div class="infoContanerInner">
+                <div class="dataDetail">
+                    <div class="TitleName"><%= locals.doc[i].title %> </div>
+                    <div class="subPart"><%= locals.doc[i].short_description %> </div>
+                    <div class="timeDur"><strong><%= timeSince(locals.doc[i].createdAt) %> </strong></div>
+                </div>
+            </div>
+           <% }} %>
+            
+        </div>
+    </div>
+
+          </div>
 
 
-<!-- ------------------------------------------------------ Analytic Section ------------------------------------------------------ -->
-        <div class="row postContainer  hidden" id="analyticSection">
+<!-- ------------------------------------------------------ Profile Section ------------------------------------------------------ -->
+        <div class="row postContainer" id="f">
 
         </div>
 
-<!-- ------------------------------------------------------ Notification Section ------------------------------------------------------ -->
-        <div class="row  hidden" id="notificationSection">
+<!-- ------------------------------------------------------ Search Section ------------------------------------------------------ -->
+        <div class="row  hidden" id="n">
 
           <div class="row dataForm">
             <div class="col-lg-6 col-md-7 col-11 mainCon">
@@ -217,8 +388,41 @@
          </div>
         </div>
 
+<!-- ------------------------------------------------------ Notification Section ------------------------------------------------------ -->
+<div class="row  hidden" id="ser">
+
+  <div class="mainConSer row">
+    <div class="col-md-10 col-lg-8">
+     <div class="mainInput row">
+         <div class="col-md-5 col-12 inputField borderRight">
+             <h6 class="title">
+                 Search
+             </h6>
+             <div class="inputArea1">
+                 <input type="search" placeholder="Enter Name" id="name">
+             </div>
+         </div>
+         <div class="col-md-7 col-12 inputField">
+             <h6 class="title">
+                 Filter
+             </h6>
+             <div class="inputArea2 ">
+                 <input type="search"  placeholder="Enter Batch" id="batch">
+                 <input type="search"  placeholder="Enter Branch" id="branch">
+                 <input class="custBTN" type="submit" value="Search" id="searchDet">
+             </div>
+         </div>
+        </div>
+    </div>
+ </div>
+ <div class="result row">
+
+  </div>
+</div>
+
+
 <!-- ------------------------------------------------------ Setting Section ------------------------------------------------------ -->
-        <div class="row  hidden" id="settingSection">
+        <div class="row  hidden" id="s">
           <div class="row dataForm">
             <div class="col-lg-6 col-md-7 col-11 mainCon">
               <form  method="post" action="http://localhost:3000/api/createUser" >
@@ -265,5 +469,33 @@
       crossorigin="anonymous"></script>
       <script src="./js/dashboard.js"></script>
       <script src="./js/editor.js"></script>
+      <script src="./js/search.js"></script>
+      <% function timeSince(date) {
+
+        var seconds = Math.floor((new Date() - date) / 1000);
+      
+        var interval = seconds / 31536000;
+      
+        if (interval > 1) {
+          return Math.floor(interval) + " yr";
+        }
+        interval = seconds / 2592000;
+        if (interval > 1) {
+          return Math.floor(interval) + " mon";
+        }
+        interval = seconds / 86400;
+        if (interval > 1) {
+          return Math.floor(interval) + " day";
+        }
+        interval = seconds / 3600;
+        if (interval > 1) {
+          return Math.floor(interval) + " hrs";
+        }
+        interval = seconds / 60;
+        if (interval > 1) {
+          return Math.floor(interval) + " min";
+        }
+        return Math.floor(seconds) + " sec";
+      } %> 
 </body>
 </html>

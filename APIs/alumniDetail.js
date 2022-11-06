@@ -24,8 +24,8 @@ router.get('/updateTemp',async(req,res,next)=>{
           alumni.deleteMany({},(err)=>{
               if (err) console.log(err)
               tempData.forEach(async(alumData) => {
-                const {name,qualification,image,batch,branch,degree,city,email,linkedin,designation,password,password2} = alumData;
-                const newAlumni = new alumni({name,qualification,image,batch:parseInt(batch),designation,branch,degree,city,email,linkedin,password,password2});
+                const {name,qualification,image,batch,branch,degree,city,email,linkedin,designation,password,password2,company,username} = alumData;
+                const newAlumni = new alumni({name,qualification,image,batch:parseInt(batch),designation,branch,degree,city,email,linkedin,password:"1234",password2:"1234",company,username});
                 const result = await newAlumni.save();
               });
           });
@@ -35,6 +35,35 @@ router.get('/updateTemp',async(req,res,next)=>{
       }
   })
 
+  router.get('/usernameSearch',async(req,res,next)=>{
+    try {
+      var q = alumni.find({username:req.query.uname},(err,doc)=>{
+        if (err) console.log(err)
+        else {
+          if(doc.length != 0) res.send({found: true});
+          else  res.send({found: false});
+        }
+      })
+      // res.send("done");
+    } catch (error) {
+      next(error)
+    }
+  });
+
+  router.get('/emailSearch',async(req,res,next)=>{
+    try {
+      var q = alumni.find({email:req.query.email},(err,doc)=>{
+        if (err) console.log(err)
+        else {
+          if(doc.length != 0) res.send({found: true});
+          else  res.send({found: false});
+        }
+      })
+      // res.send("done");
+    } catch (error) {
+      next(error)
+    }
+  });
 
   router.get('/user30',async(req,res,next)=>{
     try {
@@ -52,7 +81,7 @@ router.get('/updateTemp',async(req,res,next)=>{
   router.get('/search',async(req,res,next)=>{
     try {
       console.log(req.query);
-      console.log(req.query.batch);
+      // console.log(req.query.batch);
       var query = {
         name: { "$regex": req.query.name, "$options": "i"}
       };
@@ -126,7 +155,8 @@ router.post('/createPost',function(req,res){
       if(err) return  res(err);
       userDet.createdBy=user.name;
       userDet.designation=user.designation;
-      userDet.userId= user._id;
+      userDet.userId= user.username;
+      userDet.image = user.image;
     const newpost = new post(userDet);
     console.log(newpost);
     newpost.save((err,doc)=>{
