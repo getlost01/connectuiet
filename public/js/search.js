@@ -11,12 +11,12 @@ async function fetchApi(a,b,c){
         data.forEach((ele,ind )=> {
             temp += ` 
             <div class="resultDiv col-md-10 col-lg-8 col-12">
-            <img src="${ele.image}" alt="">
+            <img src="${(ele.image)?ele.image:"./images/user.png"}" alt="">
             <div class="details">
                 <h5>${ele.name}</h5>
                 <h6>${ele.designation}</h6>
                 <p><span class="bold">Batch: </span>${ele.batch}</p>
-                <input class="viewMore custBTN" type="submit" value="View More" data-bs-toggle="modal" data-bs-target="#exampleModal" id="detail${ind}">
+                <a class="viewMore custBTN" href="/user/${ele.username}" target="_black" id="detail${ind}"> View More </a>
             </div>
            </div>`;
         });
@@ -41,7 +41,6 @@ async function fetchApi(a,b,c){
                 `;
             })
         });
-		console.log(data);
     } catch (error) {
         console.log(error);
         

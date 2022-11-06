@@ -12,9 +12,47 @@ router.get('/',async(req,res,next)=>{
 router.get('/search',async(req,res,next)=>{
     try { let token=req.cookies.UIETConnect; alumni.findByToken(token,(err,user)=>{
         if(err) return  res(err);
-            if(user) return res.render('search'); 
+            if(user) return res.render('search',user); 
             else return res.redirect('/login');});
-}catch (error) {next(error); }
+    }catch (error) {next(error); }
+});
+
+router.get('/user/:username',async(req,res,next)=>{
+    try { let token=req.cookies.UIETConnect; alumni.findByToken(token,(err,det)=>{
+        if(err) return  res(err);
+            if(det) {
+                let username = req.params.username;
+                alumni.find({username:username},(err,user)=>{
+                    if(err) return  res(err);
+                    if(user != null && user.length != 0){
+                        post.find({
+                            _id: user[0].posts
+                          },(err,doc)=>{
+                            if(err) return  res(err);
+                            return res.render('profile',{user:user[0],doc:doc}); 
+                          })
+                    }else return res.redirect('/notfound');
+                });
+            }
+            else return res.redirect('/login');});
+    }catch (error) {next(error); }
+});
+
+router.get('/post/:postId',async(req,res,next)=>{
+    try { let token=req.cookies.UIETConnect; alumni.findByToken(token,(err,det)=>{
+        if(err) return  res(err);
+            if(det) {
+                let postId = req.params.postId;
+                        post.find({
+                            _id: postId
+                          },(err,doc)=>{
+                            if(err) return res.redirect('/notfound');
+                            if(doc)return res.render('post',{doc:doc[0]}); 
+                            else return res.redirect('/notfound');
+                          })
+            }
+            else return res.redirect('/login');});
+    }catch (error) {next(error); }
 });
 
 router.get('/dashboard',async(req,res,next)=>{

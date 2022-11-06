@@ -49,13 +49,13 @@ async function fetchPost(){
           <div class="userPhoto">
               <img src="${post.image}" alt="">
               <div class="userDet">
-                <h4> ${post.createdBy}</h4>
+                <h4> <a href="/user/${post.userId}" target="_blank">${post.createdBy}</a></h4>
                 <h6> ${post.designation}</h6>
                 <p>${timeSince(new Date(post.createdAt))}</p>
               </div>
           </div>
           <div class="title">
-            <h4> ${post.title}</h4>
+            <h4> <a href="/post/${post._id}" target="_blank">${post.title}</a></h4>
             <h6>${post.short_description}</h6>
             <div class="content">${post.post}</div>
             <h4>Category : ${post.category}</h4>

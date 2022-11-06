@@ -56,11 +56,13 @@
     border: 1px solid #4579;
     display: flex;
     border-radius: 0.25rem;
-    margin: 0.25rem 0;
+    margin: 0.4rem 0;
     background-color: white;
+    padding: 0.1rem;
 }
 .result .resultDiv img{
     width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     border: 2px solid var(--ter-col);
     margin: 0.5rem;
@@ -91,9 +93,23 @@
 }
 .result .resultDiv .details .viewMore{ 
     position: absolute;
-    top: 0.5rem;
+    bottom: 0.5rem;
     right: 0.5rem;
+    text-decoration: none;
 }
+.result .resultDiv .details .viewMore:hover{ 
+    color: white;
+}
+@media screen and (max-width: 550px) {
+    .result .resultDiv .details .viewMore{ 
+        position: relative;
+        bottom: -0.5rem;
+        left: 0;
+    }
+    .result .resultDiv{
+        padding: 0.25rem 0.25rem 1rem 0.25rem;
+    }
+  }
 
 
 .modalContent{
