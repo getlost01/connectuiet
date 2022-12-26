@@ -47,7 +47,7 @@ async function fetchPost(){
       data.forEach(post => {
           temp += `<div class="postDiv col-lg-8 col-12">
           <div class="userPhoto">
-              <img src="${post.image}" alt="">
+              <img src="${(post.image)?"./images/user.png":(post.image)}" alt="">
               <div class="userDet">
                 <h4> <a href="/user/${post.userId}" target="_blank">${post.createdBy}</a></h4>
                 <h6> ${post.designation}</h6>

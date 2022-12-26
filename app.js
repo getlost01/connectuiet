@@ -19,7 +19,7 @@ app.use(cors({
 }));
 
 connectdb();
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 3005, function(){
     console.log("➡️ UIET Connect listening on port %d in %s mode 👍", this.address().port, app.settings.env);
 });
 

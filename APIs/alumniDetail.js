@@ -67,7 +67,7 @@ router.get('/updateTemp',async(req,res,next)=>{
 
   router.get('/user30',async(req,res,next)=>{
     try {
-      var q = alumni.find({}).limit(20).sort({_id: -1});
+      var q = alumni.find({}).limit(20).sort({_id: 1});
       q.exec(function(err, property) {
           if (err) res.send(err);
           res.json(property);

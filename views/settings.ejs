@@ -272,7 +272,7 @@
            <div class="row profileCon">
             <div class="col-md-8 col-lg-6 col-12 basicInfo">
             <span data-bs-toggle="modal" data-bs-target="#exampleModal1" class="editBTN">Edit</span>
-                <img src="<%= ((locals.user.image)?locals.user.image:"./images/user.png")%>" alt="">
+                <img src="<%= ((locals.user.image)?"./images/user.png":"./images/user.png")%>" alt="">
                 <div class="dataDetail">
                     <div class="Name"><%= locals.user.name%></div>
                     <div class="Bio"><%= locals.user.bio%></div>
@@ -301,7 +301,7 @@
                 <span data-bs-toggle="modal" data-bs-target="#exampleModal3" class="editBTN">Edit</span>
                 <div class="title">Experience</div>
                 <div class="infoContanerInner">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="">
+                    <img src="./images/clogo.png" alt="">
                     <div class="dataDetail">
                         <div class="TitleName"><%= locals.user.company %></div>
                         <div class="subPart"><%= locals.user.designation %></div>
