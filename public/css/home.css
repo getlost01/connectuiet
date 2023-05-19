@@ -40,18 +40,18 @@ user-drag: none;
    font-weight: 600;
 }
 .landingBanner .leftPart .titleCon p{
-   font-size: 0.8rem;
-   color: rgb(210, 210, 210);
+   font-size: 0.9rem;
+   color: #d4d6ff;
 }
 .landingBanner .leftPart .titleCon .custBTN{
    font-size: 1rem;
    background-color: #4e54c8;
    border: 2px solid white;
+   transition: all ease-in-out 0.2s;
 }
 .landingBanner .leftPart .titleCon .custBTN:hover{
    color: #4e54c8;
    background-color: white;
-   border: 2px solid #4e54c8;
 }
 .galleryCon {
     overflow: hidden;
@@ -91,11 +91,12 @@ user-drag: none;
     border-radius: 10px;
     cursor: pointer;
     z-index: 1;
-    box-shadow: 0 0.1rem 0.25rem #262626;
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0,0.25);
+    transition: all ease-in-out 0.25s;
  }
  .galleryCon img:hover{
-   transform: scale(1.1);
-   box-shadow: 0 0.12rem 0.5rem #262626;
+   transform: scale(1.05);
+   box-shadow: 0 0.15rem 0.55rem rgba(0, 0, 0,0.35);
  }
  .galleryCon .galleryCon1:hover, .galleryCon .galleryCon2:hover {
     -webkit-animation-play-state: paused;

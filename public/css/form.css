@@ -4,6 +4,13 @@
     align-items: center;
     padding: 3rem 0;
 }
+.dataForm .info{
+    font-weight: 500;
+    color: #898989;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
 .mainCon{
     border: 1px solid var(--quad-col);
     padding: 1rem 1.5rem;
