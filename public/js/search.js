@@ -14,33 +14,33 @@ async function fetchApi(a,b,c){
             <img src="${(!ele.image)?"./images/user.png":"./images/user.png"}" alt="">
             <div class="details">
                 <h5>${ele.name}</h5>
-                <h6>${ele.designation}</h6>
-                <p><span class="bold">Batch: </span>${ele.batch}</p>
-                <a class="viewMore custBTN" href="/user/${ele.username}" target="_black" id="detail${ind}"> View More </a>
+                <h6>${ele.designation?ele.designation:"Not Updated"}</h6>
+                <p><span class="bold">Batch: </span>${ele.batch?ele.batch:"xxxx"}</p>
+                <a class="viewMore custBTN" href="/user/${ele.username}" target="_black" id="detail${ind}"> View Profile </a>
             </div>
            </div>`;
         });
         document.querySelector('.result').innerHTML = temp;
-        data.forEach((ele,ind ) => {
-            document.querySelector(`#detail${ind}`).addEventListener('click',()=>{
-                document.querySelector(`.modal-body`).innerHTML = `
-                <div class="modalContent">
-                <img src="${ele.image}" alt="">
-                <div class="details">
-                    <h5>${ele.name}</h5>
-                    <h6>${ele.designation}</h6>
-                    <p><span class="bold">Batch: </span>${ele.batch}</p>
-                    <p><span class="bold">Home city: </span>${ele.city}</p>
-                    <p><span class="bold">Degree: </span>${ele.degree}</p>
-                    <p><span class="bold">Branch: </span>${ele.branch}</p>
-                    <h6>Connect me </h6>
-                    <a href="${ele.email}" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="${ele.linkedin}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-           </div>
-                `;
-            })
-        });
+        // data.forEach((ele,ind ) => {
+        //     document.querySelector(`#detail${ind}`).addEventListener('click',()=>{
+        //         document.querySelector(`.modal-body`).innerHTML = `
+        //         <div class="modalContent">
+        //         <img src="${ele.image}" alt="">
+        //         <div class="details">
+        //             <h5>${ele.name}</h5>
+        //             <h6>${ele.designation}</h6>
+        //             <p><span class="bold">Batch: </span>${ele.batch}</p>
+        //             <p><span class="bold">Home city: </span>${ele.city}</p>
+        //             <p><span class="bold">Degree: </span>${ele.degree}</p>
+        //             <p><span class="bold">Branch: </span>${ele.branch}</p>
+        //             <h6>Connect me </h6>
+        //             <a href="${ele.email}" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        //             <a href="${ele.linkedin}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        //         </div>
+        //    </div>
+        //         `;
+        //     })
+        // });
     } catch (error) {
         console.log(error);
         

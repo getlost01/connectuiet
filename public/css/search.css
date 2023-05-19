@@ -44,6 +44,7 @@
 }
 .mainConSer .inputArea2 input[type = "submit"]{
     width: 25%;
+    padding: 0.40rem;
 }
 .result{
     padding: 1.5rem 1rem;
@@ -53,7 +54,7 @@
     margin: 0;
 }
 .result .resultDiv{
-    border: 1px solid #4579;
+    border: 1px solid #e8e8e8;
     display: flex;
     border-radius: 0.25rem;
     margin: 0.4rem 0;
@@ -64,7 +65,7 @@
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    border: 2px solid var(--ter-col);
+    border: 1px solid #4e54c8;
     margin: 0.5rem;
 }
 .result .resultDiv .details,.modalContent .details{
@@ -80,13 +81,15 @@
 }
 .result .resultDiv .details h6,.modalContent .details h6{
     margin: 0.5rem 0 0.15rem 0;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
+    color: #666;
 }
 .result .resultDiv .details p,.modalContent .details p{ 
     margin: -0.1rem 0 0.15rem 0;
+    font-size: 0.9rem;
     font-weight: 500;
-    font-size: 0.8rem;
+    color: #666;
 }
 .result .resultDiv .details .bold,.modalContent .details .bold{ 
     font-weight: 600;
@@ -136,4 +139,3 @@
     background-color: black;
     color: white;
 }
-
