@@ -10,6 +10,9 @@ body {
 textarea::-webkit-scrollbar-thumb{
     display: none;
 }
+.pt-10{
+    padding-top: 5rem;
+}
   :root {
     --body-color: #f4f7ff;
     --box-color: #fff;
@@ -28,7 +31,7 @@ textarea::-webkit-scrollbar-thumb{
     --tran-05: all 0.3s ease;
 }
  body.dark {
-    --body-color: #484848;
+    --body-color: #666;
     --box-color: #2a2a2a;
     --primary-color: rgb(0, 0, 0);
     --text-color: #e8e8e8;
@@ -306,7 +309,7 @@ body.dark .home {
         width: calc(100% - 0px);
     }
     .sidebar ~ .home {
-       opacity: 10%;
+       opacity: 0%;
     }
     .sectionHeader{
         position: fixed;
@@ -320,9 +323,12 @@ body.dark .home {
 .sectionHeader{
     background-color: white;
     height: 3.5rem;
-    z-index: 1;
+    z-index: 10;
     box-shadow: 0 0.1rem 0.2rem #cdcdcd;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .sectionHeader img{
     width: 2.5rem;
@@ -361,12 +367,14 @@ body.dark .home {
     display: flex;
     justify-content: center;
     padding: 1rem;
+    padding-top: 5rem;
 }
 .postContainer .postDiv{
     background-color: white;
     border: 1px solid #e8e8e8;
     padding: 0.25rem;
     margin: 1rem;
+    border-radius: 0.5rem;
 }
 .postContainer .postDiv .userPhoto{
     display: flex;
@@ -381,27 +389,31 @@ body.dark .home {
 .postContainer .postDiv .userPhoto h4{
     font-size: 1rem;
     font-weight: 500;
-    margin: 0.3rem 0.3rem 0.1rem 0.3rem;
+    margin: 0.3rem 0.3rem 0.2rem 0.8rem;
 }
 .postContainer .postDiv .userPhoto h6{
     font-size: 0.75rem;
-    color: #808080;
+    color: #666;
     font-weight: 400;
-    margin: 0.15rem 0.3rem 0 0.3rem;
+    margin: 0.15rem 0.3rem 0.2rem 0.8rem;
 }
 .postContainer .postDiv .userPhoto p{
-    font-size: 0.75rem;
-    color: #808080;
-    font-weight: 400;
-    margin: 0 0.3rem 0 0.3rem;
+    font-size: 0.7rem;
+    color: #666;
+    font-weight: 600;
+    margin: 0 0.3rem 0 0.8rem;
 }
 .postContainer .postDiv .title{
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 .postContainer .postDiv .title h4{
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #4e4e4e;
     margin: 0.15rem 0.3rem 0.1rem 0.75rem;
+}
+.postContainer .postDiv .title h4 span{
+    font-weight: 600;
 }
 .postContainer .postDiv .title h6{
     font-size: 0.8rem;
@@ -420,6 +432,7 @@ body.dark .home {
     font-size: 0.8rem;
     color: #444444;
     border: 1px solid #e8e8e8;
+    background-color: #fafafa;
     padding: 0.5rem;
     border-radius: 0.25rem;
 }
@@ -485,29 +498,47 @@ body.dark .home {
 .profileCon .basicInfo .dataDetail .Bio{
     font-weight: 500;
     font-size: 0.8rem;
-    color: #484848;
+    color: #666;
     margin: 0;
     padding: 0;
 }
 .profileCon .basicInfo .dataDetail .City{
     font-weight: 500;
     font-size: 0.8rem;
-    color: #484848;
+    color: #666;
     margin: 0;
     padding: 0;
     margin-bottom: 0.2rem;
 }
 .profileCon .basicInfo .dataDetail .Contact{
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.8rem;
-    color: #484848;
+    color: #666;
 }
 .profileCon .infoContaner .dataDetail .TitleName{
     font-weight: 600;
     font-size: 0.9rem;
 }
 .profileCon .infoContaner .dataDetail .subPart, .profileCon .infoContaner .dataDetail .timeDur{
-    font-weight: 400;
-    font-size: 0.7rem;
+    font-weight: 500;
+    font-size: 0.8rem;    
+    color: #666;
     margin-bottom: 0;
+}
+.profileCon .fa-envelope{
+    font-size: 1rem;
+    background-color: #ea4336;
+    color: white;
+    padding: 0.4rem;
+    border-radius: 50%;
+    margin: 1rem 0.5rem;
+
+}
+.profileCon .fa-linkedin{
+    font-size: 1rem;
+    background-color: #0b66c2;
+    color: white;
+    padding: 0.4rem 0.5rem;
+    border-radius: 50%;
+    margin: 1rem 0.5rem;
 }

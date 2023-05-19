@@ -25,13 +25,14 @@ toggle.addEventListener("click", () => {
 //   console.log(document.querySelector(".fr-wrapper .fr-view").innerHTML);
 // });
 
-var sectionArr = ["f","p","ser","n","s"];
+var sectionArr = ["feed","profile","search","new","setting"];
 
 sectionArr.forEach((ele,i) => {
     var sidebarEle = `dash${i}`;
     document.querySelector(`#${sidebarEle}`).addEventListener('click',()=>{
        sectionArr.forEach(id=>{
             document.querySelector(`#${id}`).classList.add('hidden');
+            sidebar.classList.add("close");
        })
        document.querySelector(`#${ele}`).classList.remove('hidden');
     })
@@ -58,7 +59,7 @@ async function fetchPost(){
             <h4> <a href="/post/${post._id}" target="_blank">${post.title}</a></h4>
             <h6>${post.short_description}</h6>
             <div class="content">${post.post}</div>
-            <h4>Category : ${post.category}</h4>
+            <h4>Category : <span> ${post.category}</span></h4>
           </div>
         </div>`;
       });

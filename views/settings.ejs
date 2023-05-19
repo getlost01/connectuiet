@@ -100,7 +100,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">College Info Update</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Experience Update</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body mainCon">
@@ -142,35 +142,35 @@
       
             <ul class="menu-links">
               <li class="nav-link">
-                <a href="#f" id="dash0">
+                <a href="#feed" id="dash0">
                   <i class="fa-solid fa-house icon"></i>
                   <span class="text nav-text">Feeds</span>
                 </a>
               </li>
       
               <li class="nav-link">
-                <a href="#p" id="dash1">
+                <a href="#profile" id="dash1">
                   <i class="fa-solid fa-user  icon"></i>
                   <span class="text nav-text">Profile</span>
                 </a>
               </li>
 
               <li class="nav-link">
-                <a href="#ser" id="dash2">
+                <a href="#search" id="dash2">
                   <i class="fa-solid fa-magnifying-glass icon"></i>
                   <span class="text nav-text">Search</span>
                 </a>
               </li>
 
               <li class="nav-link">
-                <a href="#n" id="dash3">
+                <a href="#new" id="dash3">
                   <i class="fa-solid fa-bullhorn icon"></i>
                   <span class="text nav-text">Notifications</span>
                 </a>
               </li>
 
               <li class="nav-link">
-                <a href="#s" id="dash4">
+                <a href="#setting" id="dash4">
                   <i class="fa-solid fa-gear icon"></i>
                   <span class="text nav-text">Settings</span>
                 </a>
@@ -211,14 +211,14 @@
            <div class="sectionHeader">
              <img src="<%= ((locals.user.image)?locals.user.image:"./images/user.png")%>" type="button" data-bs-toggle="dropdown" aria-expanded="false">
              <ul class="dropdown-menu dropdown-menu-light">
-              <li><a class="dropdown-item active" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item active" href="/">Home Page</a></li>
+              <li><a class="dropdown-item" href="/comingsoon">Events Page</a></li>
+              <li><a class="dropdown-item" href="/comingsoon">Talk to Alumni </a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="/logout">Logout</a></li>
             </ul>
            </div>
-           <div class="row hidden" id="p">
+           <div class="row hidden pt-10" id="profile">
            <!-- <div class="row dataForm" >
             <div class="col-lg-6 col-md-7 col-11 mainCon">
               <form  method="post" action="/api/updateUser" >
@@ -278,8 +278,8 @@
                     <div class="Bio"><%= locals.user.bio%></div>
                     <div class="City"> <a href="https://www.google.com/maps/place/<%= locals.user.city%>" target="_blank" rel="noopener noreferrer"> <%= locals.user.city%> </a></div>
                     <div class="Contact">
-                       <strong> Contact me:</strong> <br><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=<%= locals.user.email%>" target="_blank" rel="noopener noreferrer"><%= locals.user.email%></a><br>
-                        <a href="<%= locals.user.linkedin%>" target="_blank" rel="noopener noreferrer"><%= locals.user.linkedin %></a>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=<%= locals.user.email%>" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="<%= locals.user.linkedin%>" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -336,12 +336,12 @@
 
 
 <!-- ------------------------------------------------------ Profile Section ------------------------------------------------------ -->
-        <div class="row postContainer" id="f">
+        <div class="row postContainer" id="feed">
 
         </div>
 
 <!-- ------------------------------------------------------ Search Section ------------------------------------------------------ -->
-        <div class="row  hidden" id="n">
+        <div class="row  hidden pt-10" id="new">
 
           <div class="row dataForm">
             <div class="col-lg-6 col-md-7 col-11 mainCon">
@@ -380,7 +380,7 @@
                   <div id="editor-container" class="editorCon"></div>
                   <!-- <div class="value1" id="value1"> </div> -->
                   <div class="center">
-                      <input class="custBTN" type="submit" value="Submit" id="okSubmit">
+                      <input class="custBTN" type="submit" value="Create Post" id="okSubmit">
                   </div>
                   <textarea class="hidden" name="post" id="postValue" rows="10"></textarea>
               </form>
@@ -389,7 +389,7 @@
         </div>
 
 <!-- ------------------------------------------------------ Notification Section ------------------------------------------------------ -->
-<div class="row  hidden" id="ser">
+<div class="row  hidden pt-5" id="search">
 
   <div class="mainConSer row">
     <div class="col-md-10 col-lg-8">
@@ -422,10 +422,10 @@
 
 
 <!-- ------------------------------------------------------ Setting Section ------------------------------------------------------ -->
-        <div class="row  hidden" id="s">
+        <div class="row  hidden pt-5" id="setting">
           <div class="row dataForm">
             <div class="col-lg-6 col-md-7 col-11 mainCon">
-              <form  method="post" action="http://localhost:3000/api/createUser" >
+               <form  method="get" action="/noPermission" >
                   <h4>Change Password</h4>
                   <label for="">Enter current password</label>
                   <div class="inputCon">
@@ -442,16 +442,16 @@
                     <input required type="text" placeholder="Confirm password" name="old_password">
                   </div>
                   <div class="center">
-                      <input class="custBTN" type="submit" value="Submit" id="okSubmit">
+                      <input class="custBTN" type="submit" value="Change Now" id="updatePass">
                   </div>
               </form>
           </div>
          
             <div class="col-lg-6 col-md-7 col-11 mainCon">
-              <form  method="post" action="http://localhost:3000/api/createUser" >
+              <form  method="get" action="/noPermission" >
                   <h4>Delete my Account</h4>
                   <h5>Once you delete your account, there is no going back. Please be careful. We will immediately delete all of your data, along with all of your posts.</h5>
-                  <input class="custBTND" type="submit" value="Delete Account" id="okSubmit">
+                  <input class="custBTND" type="submit" value="Delete Account" id="delAccount">
                 </form>
             </div>
           </div>
