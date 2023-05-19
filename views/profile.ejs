@@ -13,7 +13,7 @@
   <link rel="stylesheet" href=".././css/dashboard.css">
   <link rel="stylesheet" href=".././css/common.css">
 </head>
-<body>
+<body style="background-color: #f5f7ff;">
            <%- include('header'); -%>
            <div class="row profileCon">
             <div class="col-md-8 col-lg-6 col-12 basicInfo">
@@ -23,9 +23,9 @@
                     <div class="Bio"><%= locals.user.bio%></div>
                     <div class="City"> <a href="https://www.google.com/maps/place/<%= locals.user.city%>" target="_blank" rel="noopener noreferrer"> <%= locals.user.city%> </a></div>
                     <div class="Contact">
-                       <strong> Contact me:</strong> <br><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=<%= locals.user.email%>" target="_blank" rel="noopener noreferrer"><%= locals.user.email%></a><br>
-                        <a href="<%= locals.user.linkedin%>" target="_blank" rel="noopener noreferrer"><%= locals.user.linkedin %></a>
-                    </div>
+                      <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=<%= locals.user.email%>" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
+                      <a href="<%= locals.user.linkedin%>" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
                 </div>
             </div>
             <div class="col-md-8 col-lg-6 col-12 infoContaner">
@@ -75,7 +75,7 @@
         </div>
     </div>
 
-          </div>
+
 
 
       	<!-- JavaScript Bundle with Popper -->
