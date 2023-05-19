@@ -1,6 +1,6 @@
 <div class="header">
   <div class="inner-header flex">
-  <h1>Your page has deep-dived in the waves.</h1>
+  <h1><%= ((locals.title)?locals.title:"Your page has deep-dived in the waves.")%></h1>
   </div>
   <div class="flex">
     <a href="/"><button class="custBTN">Return Home</button></a> 
@@ -38,6 +38,7 @@ h1 {
   font-weight:500;
   letter-spacing: 2px;
   font-size:48px;
+  font-weight: 600;
 }
 p {
   font-family: 'Lato', sans-serif;
@@ -132,12 +133,12 @@ p {
   }
 }
 .custBTN{
-    background-color: #0d6efd;
-    color: white;
+    background-color: white;
+    color: #0d6efd;
     border:var(--fiv-col);
     padding: 0.8rem 1rem;
     font-size: 1rem;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     font-weight: 600;
     border: 1px solid white;
     transition: all 0.3s ease-in-out;
