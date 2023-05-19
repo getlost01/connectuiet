@@ -24,6 +24,21 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px var(--fiv-col) inset !important;
 }
+::-webkit-scrollbar {
+    width: 8px;
+    height: 0;
+}
+::-webkit-scrollbar-track {
+    background: #f5f7ff;
+}
+::-webkit-scrollbar-thumb {
+    background: #4e54c8;
+    border-radius: 10px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #676ffb;
+}
 img {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -56,7 +71,7 @@ img {
     font-weight: 600;
 }
 .custBTN:hover,.custBTND:hover{
-    box-shadow: 0 0.1rem 0.25rem rgb(131, 131, 131);
+    box-shadow: 0 0.1rem 0.25rem rgb(206, 206, 206);
 }
 .custBTN:active,.custBTND:active{
     transform: scale(0.97);
