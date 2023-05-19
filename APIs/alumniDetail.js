@@ -125,13 +125,13 @@ router.post('/login', function(req,res){
   
       else{
           alumni.findOne({'email':req.body.email},function(err,user){
-              if(!user) return res.json({isAuth : false, message : ' Auth failed ,email not found'});
+              if(!user) return res.redirect('/login');
       
               user.comparepassword(req.body.password,(err,isMatch)=>{
-                  if(!isMatch) return res.json({ isAuth : false,message : "password doesn't match"});
+                  if(!isMatch) return res.redirect('/login');
       
               user.generateToken((err,user)=>{
-                  if(err) return res.status(400).send(err);
+                  if(err) return res.redirect('/login');
                   res.cookie('UIETConnect',user.token).cookie('name', user.name).redirect('/dashboard');
               });    
           });
