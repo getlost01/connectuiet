@@ -25,7 +25,7 @@ router.get('/updateTemp',async(req,res,next)=>{
               if (err) console.log(err)
               tempData.forEach(async(alumData) => {
                 const {name,qualification,image,batch,branch,degree,city,email,linkedin,designation,password,password2,company,username} = alumData;
-                const newAlumni = new alumni({name,qualification,image,batch:parseInt(batch),designation,branch,degree,city,email,linkedin,password:"1234",password2:"1234",company,username});
+                const newAlumni = new alumni({name,qualification,image,batch:parseInt(batch),designation,branch,degree,city,email,linkedin,password:"1234user",password2:"1234user",company,username});
                 const result = await newAlumni.save();
               });
           });
@@ -80,7 +80,7 @@ router.get('/updateTemp',async(req,res,next)=>{
 
   router.get('/search',async(req,res,next)=>{
     try {
-      console.log(req.query);
+      // console.log(req.query);
       // console.log(req.query.batch);
       var query = {
         name: { "$regex": req.query.name, "$options": "i"}
@@ -100,7 +100,7 @@ router.get('/updateTemp',async(req,res,next)=>{
   router.post('/register',function(req,res){
     // taking a user
     const newuser=new alumni(req.body);
-    console.log(req.body);
+    // console.log(req.body);
    if(newuser.password!=newuser.password2)return res.status(400).json({message: "password not match"});
     
     alumni.findOne({email:newuser.email},function(err,user){
@@ -158,7 +158,7 @@ router.post('/createPost',function(req,res){
       userDet.userId= user.username;
       userDet.image = user.image;
     const newpost = new post(userDet);
-    console.log(newpost);
+    // console.log(newpost);
     newpost.save((err,doc)=>{
       if(err) {console.log(err);
           return res.status(400).json({ success : false});}

@@ -17,7 +17,7 @@
            <%- include('header'); -%>
            <div class="row profileCon">
             <div class="col-md-8 col-lg-6 col-12 basicInfo">
-                <img src="<%= ((locals.user.image)?".././images/user.png":".././images/user.png")%>" alt="">
+                <img src="<%= ((locals.user.image)?locals.user.image:".././images/user.png")%>" alt="">
                 <div class="dataDetail">
                     <div class="Name"><%= locals.user.name%></div>
                     <div class="Bio"><%= locals.user.bio%></div>

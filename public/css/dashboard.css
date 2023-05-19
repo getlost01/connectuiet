@@ -333,7 +333,7 @@ body.dark .home {
 .sectionHeader img{
     width: 2.5rem;
     border-radius: 50%;
-    border: 1px solid var(--special-color);
+    border: 1px solid #d4d4d4;
     position: absolute;
     top: 0.5rem;
     right: 1.5rem;
