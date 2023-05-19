@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | <%= locals.user.name %></title>
+    <title>Dashboard | <%=locals.user.name %></title>
     	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
 	integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
@@ -36,23 +36,23 @@
                 <h4>Update Details</h4>
                 <div class="inputCon">
                     <i class="fa-solid fa-user"></i>
-                    <input required type="text" placeholder="Full Name" name="name" value="<%= locals.user.name %> ">
+                    <input required type="text" placeholder="Full Name" name="name" value="<%=locals.user.name %> ">
                 </div>
                 <div class="inputCon">
                     <i class="fa-solid fa-grip-lines"></i>
-                    <input required type="text" placeholder="Bio" name="bio" value="<%= locals.user.bio %> ">
+                    <input required type="text" placeholder="Bio" name="bio" value="<%=locals.user.bio %> ">
                 </div>
                 <div class="inputCon">
                     <i class="fa-solid fa-location-dot"></i>
-                    <input required type="text" placeholder="City" name="city" value="<%= locals.user.city %> ">
+                    <input required type="text" placeholder="City" name="city" value="<%=locals.user.city %> ">
                 </div>
                 <div class="inputCon">
                     <i class="fa-solid fa-envelope"></i>
-                    <input required type="email" placeholder="Email" name="email" value="<%= locals.user.email %> ">
+                    <input required type="email" placeholder="Email" name="email" value="<%=locals.user.email %> ">
                 </div>
                 <div class="inputCon">
                     <i class="fa-brands fa-linkedin"></i>
-                    <input required type="url" placeholder="Linkedin URL" name="linkedin" value="<%= locals.user.linkedin %> ">
+                    <input required type="url" placeholder="Linkedin URL" name="linkedin" value="<%=locals.user.linkedin %> ">
                 </div>
         </div>
         <div class="modal-footer">
@@ -76,15 +76,15 @@
                 <h4>Update Details</h4>
                 <div class="inputCon">
                     <i class="fa-solid fa-file"></i>
-                    <input required type="text" placeholder="Degree" name="degree" value="<%= locals.user.degree %> ">
+                    <input required type="text" placeholder="Degree" name="degree" value="<%=locals.user.degree %> ">
                 </div>
                 <div class="inputCon">
                   <i class="fa-solid fa-flask-vial"></i>
-                  <input required type="text" placeholder="Branch" name="branch" value="<%= locals.user.branch %> ">
+                  <input required type="text" placeholder="Branch" name="branch" value="<%=locals.user.branch %> ">
                 </div>
                 <div class="inputCon">
                     <i class="fa-solid fa-list"></i>
-                    <input required type="text" placeholder="Batch" max="2022" min="1950" name="batch" value="<%= locals.user.batch %> ">
+                    <input required type="text" placeholder="Batch" max="2022" min="1950" name="batch" value="<%=locals.user.batch %> ">
                 </div>
         </div>
         <div class="modal-footer">
@@ -108,11 +108,11 @@
                 <h4>Update Details</h4>
                 <div class="inputCon">
                   <i class="fa-solid fa-building"></i>
-                    <input required type="text" placeholder="Company" name="company" value="<%= locals.user.company %> ">
+                    <input required type="text" placeholder="Company" name="company" value="<%=locals.user.company %> ">
                 </div>
                 <div class="inputCon">
                     <i class="fa-solid fa-pen-nib"></i>
-                    <input required type="text" placeholder="Designation" name="designation" value="<%= locals.user.designation %> ">
+                    <input required type="text" placeholder="Designation" name="designation" value="<%=locals.user.designation %> ">
                 </div>
         </div>
         <div class="modal-footer">
@@ -209,7 +209,7 @@
 <!-- ------------------------------------------------------ Feed Section ------------------------------------------------------ -->
 
            <div class="sectionHeader">
-             <img src="<%= ((locals.user.image)?locals.user.image:"./images/user.png")%>" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <img src="<%=((locals.user.image)?locals.user.image:"./images/user.png")%>" type="button" data-bs-toggle="dropdown" aria-expanded="false">
              <ul class="dropdown-menu dropdown-menu-light">
               <li><a class="dropdown-item active" href="/">Home Page</a></li>
               <li><a class="dropdown-item" href="/comingsoon">Events Page</a></li>
@@ -225,43 +225,43 @@
                   <h4>Update Details</h4>
                   <div class="inputCon">
                       <i class="fa-solid fa-user"></i>
-                      <input required type="text" placeholder="Full Name" name="name" value="<%= locals.user.name %> ">
+                      <input required type="text" placeholder="Full Name" name="name" value="<%=locals.user.name %>">
                   </div>
                   <div class="inputCon">
                       <i class="fa-solid fa-envelope"></i>
-                      <input required type="email" placeholder="Email" name="email" readonly value="<%= locals.user.email%>">
+                      <input required type="email" placeholder="Email" name="email" readonly value="<%=locals.user.email%>">
                   </div>
                   <div class="inputCon">
                       <i class="fa-solid fa-pen-nib"></i>
-                      <input required type="text" placeholder="Designation" name="designation" value="<%= locals.user.designation%>">
+                      <input required type="text" placeholder="Designation" name="designation" value="<%=locals.user.designation%>">
                   </div>
                   <div class="inputCon">
                       <i class="fa-solid fa-image"></i>
-                      <input required type="url" placeholder="Image Url" name="image" value="<%= locals.user.image%>">
+                      <input required type="url" placeholder="Image Url" name="image" value="<%=locals.user.image%>">
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-7 col-11 mainCon">
                   <div class="inputCon">
                       <i class="fa-solid fa-list"></i>
-                      <input required type="text" placeholder="Batch" max="2022" min="1950" name="batch" value="<%= locals.user.batch%>">
+                      <input required type="text" placeholder="Batch" max="2022" min="1950" name="batch" value="<%=locals.user.batch%>">
                   </div>
                   <div class="inputCon">
                       <i class="fa-solid fa-file"></i>
-                      <input required type="text" placeholder="Degree" name="degree" value="<%= locals.user.degree%>">
+                      <input required type="text" placeholder="Degree" name="degree" value="<%=locals.user.degree%>">
                   </div>
                   <div class="inputCon">
                     <i class="fa-solid fa-flask-vial"></i>
-                    <input required type="text" placeholder="Branch" name="branch" value="<%= locals.user.branch%>">
+                    <input required type="text" placeholder="Branch" name="branch" value="<%=locals.user.branch%>">
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-7 col-11 mainCon">
                   <div class="inputCon">
                       <i class="fa-solid fa-location-dot"></i>
-                      <input required type="text" placeholder="City" name="city" value="<%= locals.user.city%>">
+                      <input required type="text" placeholder="City" name="city" value="<%=locals.user.city%>">
                   </div>
                   <div class="inputCon">
                       <i class="fa-brands fa-linkedin"></i>
-                      <input required type="url" placeholder="Linkedin URL" name="linkedin" value="<%= locals.user.linkedin%>">
+                      <input required type="url" placeholder="Linkedin URL" name="linkedin" value="<%=locals.user.linkedin%>">
                   </div>
                   <div class="center">
                       <input class="custBTN" type="submit" value="Submit">
@@ -272,14 +272,14 @@
            <div class="row profileCon">
             <div class="col-md-8 col-lg-6 col-12 basicInfo">
             <span data-bs-toggle="modal" data-bs-target="#exampleModal1" class="editBTN">Edit</span>
-                <img src="<%= ((locals.user.image)?"./images/user.png":"./images/user.png")%>" alt="">
+                <img src="<%=((locals.user.image)?locals.user.image:"./images/user.png")%>" alt="">
                 <div class="dataDetail">
-                    <div class="Name"><%= locals.user.name%></div>
-                    <div class="Bio"><%= locals.user.bio%></div>
-                    <div class="City"> <a href="https://www.google.com/maps/place/<%= locals.user.city%>" target="_blank" rel="noopener noreferrer"> <%= locals.user.city%> </a></div>
+                    <div class="Name"><%=locals.user.name%></div>
+                    <div class="Bio"><%=locals.user.bio%></div>
+                    <div class="City"> <a href="https://www.google.com/maps/place/<%=locals.user.city%>" target="_blank" rel="noopener noreferrer"> <%=locals.user.city%> </a></div>
                     <div class="Contact">
-                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=<%= locals.user.email%>" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
-                        <a href="<%= locals.user.linkedin%>" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=<%=locals.user.email%>" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="<%=locals.user.linkedin%>" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -290,8 +290,8 @@
                     <img src="./images/logo.png" alt="">
                     <div class="dataDetail">
                         <div class="TitleName">University Institute Of Engineering And Technology, Kanpur</div>
-                        <div class="subPart"><%= locals.user.degree %> - <%= locals.user.branch%> </div>
-                        <div class="timeDur"><%= locals.user.batch %> - <%= locals.user.batch + 4%></div>
+                        <div class="subPart"><%=locals.user.degree %> - <%=locals.user.branch%> </div>
+                        <div class="timeDur"><%=locals.user.batch %> - <%=locals.user.batch + 4%></div>
                     </div>
                 </div>
                 
@@ -303,8 +303,8 @@
                 <div class="infoContanerInner">
                     <img src="./images/clogo.png" alt="">
                     <div class="dataDetail">
-                        <div class="TitleName"><%= locals.user.company %></div>
-                        <div class="subPart"><%= locals.user.designation %></div>
+                        <div class="TitleName"><%=locals.user.company %></div>
+                        <div class="subPart"><%=locals.user.designation %></div>
                         <div class="timeDur">2020 - 2024</div>
                     </div>
                 </div>
@@ -316,15 +316,15 @@
           <% if(locals.doc.length<=0) {%>
             <div class="infoContanerInner">
               <div class="dataDetail">
-                  <div class="subPart"><%= locals.user.name%> haven't post yet.</div>
+                  <div class="subPart"><%=locals.user.name%> haven't post yet.</div>
               </div>
           </div>
            <% }else { for(let i = locals.doc.length-1 ;i>=0;--i){%>
               <div class="infoContanerInner">
                 <div class="dataDetail">
-                    <div class="TitleName">  <a href="/post/<%= locals.doc[i]._id%> " target="_blank"> <%= locals.doc[i].title %> </a></div>
-                    <div class="subPart"><%= locals.doc[i].short_description %> </div>
-                    <div class="timeDur"><strong><%= timeSince(locals.doc[i].createdAt) %> </strong></div>
+                    <div class="TitleName">  <a href="/post/<%=locals.doc[i]._id%> " target="_blank"> <%=locals.doc[i].title %> </a></div>
+                    <div class="subPart"><%=locals.doc[i].short_description %> </div>
+                    <div class="timeDur"><strong><%=timeSince(locals.doc[i].createdAt) %> </strong></div>
                 </div>
             </div>
            <% }} %>
@@ -335,7 +335,7 @@
           </div>
 
 
-<!-- ------------------------------------------------------ Profile Section ------------------------------------------------------ -->
+<!-- ------------------------------------------------------ Feed Section ------------------------------------------------------ -->
         <div class="row postContainer" id="feed">
 
         </div>

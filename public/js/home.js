@@ -29,16 +29,16 @@ async function fetchApi(){
         const response = await fetch('/api/user30');
 		const data = await response.json();
         var temp = ``;
-        for(var i = 0; i<10;++i){temp += `<a href="/user/${data[i].username}" target="_blank"> <img src="${(!data[i].image)?data[i].image:"./images/user.png"}" alt="${data[i].name.split(" ")[0]} ${data[i].designation}" class="homeImage"></a>`;}
+        for(var i = 0; i<10;++i){temp += `<a href="/user/${data[i].username}" target="_blank"> <img src="${(data[i].image)?data[i].image:"./images/user.png"}" alt="${data[i].name.split(" ")[0]} ${data[i].designation}" class="homeImage"></a>`;}
         document.querySelector('#gallery1').innerHTML = temp;
         temp = ``;
-        for(var i = 5; i<15;++i){temp += `<a href="/user/${data[i].username}" target="_blank"><img src="${(!data[i].image)?data[i].image:"./images/user.png"}" alt="${data[i].name.split(" ")[0]} ${data[i].designation}" class="homeImage"></a>`;}
+        for(var i = 5; i<15;++i){temp += `<a href="/user/${data[i].username}" target="_blank"><img src="${(data[i].image)?data[i].image:"./images/user.png"}" alt="${data[i].name.split(" ")[0]} ${data[i].designation}" class="homeImage"></a>`;}
         document.querySelector('#gallery2').innerHTML = temp;
         temp = ``;
-        for(var i = 10; i<20;++i){temp += `<a href="/user/${data[i].username}" target="_blank"><img src="${(!data[i].image)?data[i].image:"./images/user.png"}" alt="${data[i].name.split(" ")[0]} ${data[i].designation}" class="homeImage"></a>`;}
+        for(var i = 10; i<20;++i){temp += `<a href="/user/${data[i].username}" target="_blank"><img src="${(data[i].image)?data[i].image:"./images/user.png"}" alt="${data[i].name.split(" ")[0]} ${data[i].designation}" class="homeImage"></a>`;}
         document.querySelector('#gallery3').innerHTML = temp;
         updateDet();
-		console.log(data);
+		// console.log(data);
     } catch (error) {
         console.log(error);
         

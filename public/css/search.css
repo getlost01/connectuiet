@@ -65,7 +65,7 @@
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    border: 1px solid #4e54c8;
+    border: 2px solid #e8e8e8;
     margin: 0.5rem;
 }
 .result .resultDiv .details,.modalContent .details{

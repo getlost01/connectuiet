@@ -11,7 +11,7 @@ async function fetchApi(a,b,c){
         data.forEach((ele,ind )=> {
             temp += ` 
             <div class="resultDiv col-md-10 col-lg-8 col-12">
-            <img src="${(!ele.image)?"./images/user.png":"./images/user.png"}" alt="">
+            <img src="${(ele.image)?ele.image:"./images/user.png"}" alt="">
             <div class="details">
                 <h5>${ele.name}</h5>
                 <h6>${ele.designation?ele.designation:"Not Updated"}</h6>
